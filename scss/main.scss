@@ -9,14 +9,14 @@
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   line-height: 1.6;
   background: #fff;
 }
 
 a {
   text-decoration: none;
-  color: $dark-color;
+  color: $secondary-color;
 }
 
 ul {
@@ -35,10 +35,8 @@ img {
 
 // Logo
 #logo {
-  width: 70px;
-  height: 70px;
-  color: #fff;
-  text-transform: uppercase;
+  width: 98px;
+  height: 40px;
 }
 
 // Main Nav
@@ -69,7 +67,7 @@ img {
 
     &.current {
       border-color: $main-color;
-    }
+    } 
   }
 }
 
@@ -80,7 +78,10 @@ img {
     background: $bg-image no-repeat center right / cover;
     height: 100vh;
     color: #fff;
-
+    .header_home_overlay {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
     // Header Content
     .header-content {
       text-align: center;
@@ -223,7 +224,7 @@ img {
 
     .bio {
       grid-area: bio;
-      border-left: 3px solid $main-color;
+      border-right: 3px solid $main-color;
       padding: 0.8rem;
     }
 
@@ -257,8 +258,8 @@ img {
 
       div {
         height: 100%;
-        color: #fff;
-        text-align: center;
+   //     color: #fff;
+     //   text-align: center;
         background: $main-color;
       }
     }
@@ -268,39 +269,42 @@ img {
     .about-logos {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 2rem;
+      grid-gap: 1rem;
+	  align-items: center;
 
       img {
-        width: 70%;
+        width: 25%; 
+		margin:auto;
       }
     }
   }
   // About D
   &-d {
-    .testimonials {
+    .feedback {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 0.5rem;
-
-      ul {
-        list-style: none;
-        margin-top: 1rem;
-        display: flex;
-        align-items: center;
-      }
 
       p {
         border: 1px solid $medium-color;
         border-radius: 5px;
         padding: 0.5rem;
       }
+	  
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+      
 
-      img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 0.5rem;
-      }
+		  img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			margin-right: 0.5rem;
+		  }
+		}
     }
   }
 }
